@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StudentList } from "./StudentList";
+import { AddStudent } from "./AddStudent";
 
 export const Student = () => {
   var students = [
@@ -50,12 +51,20 @@ export const Student = () => {
       return s.id !== id;
     });
     console.log(studentdata);
+    alert("Student Deleted ")
     setstudentdata(students);
+   
+  }
+  function saveStudent(student){
+    students = [...studentdata,student]
+    setstudentdata(students)
+
   }
 
   return (
     <div>
       Student
+      <AddStudent saveStudent={saveStudent}/>
       <StudentList studData={studentdata} deletestud={deleteStudent} />
     </div>
   );

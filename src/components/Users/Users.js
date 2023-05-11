@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { UserList } from "./UserList";
+import { AddUser } from "./AddUser";
 
 export const Users = () => {
   var users = [
@@ -40,9 +41,17 @@ export const Users = () => {
     });
     setuserData(users)
   }
+
+  function saveUser(user){
+    console.log("add User");
+    users = [...userData,user]
+    setuserData(users)
+    alert("user added SuccessFully")
+  }
   return (
     <div>
       User's Component
+      <AddUser saveUser={saveUser}/>
       <UserList users={userData} deleteUser={deleteUser}/>
     </div>
   );
