@@ -5,9 +5,9 @@ export const Navbar = () => {
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <Link class="navbar-brand" to={"/"}>
           React Learning
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -22,38 +22,34 @@ export const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <Link class="nav-link" to={"/employees"}>
-                Employees <span class="sr-only"></span>
+              <Link class="nav-link" to={"/product"}>
+                Task Product <span class="sr-only"></span>
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" href="#">
-                Features
-              </Link>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <Link class="nav-link" to={"/aboutus"}>
-                About Us
+                About Me
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to={"/storage"}>
-                Storage Demo
+            
+            <li class="nav-item active">
+              <Link class="nav-link" to={"/get"}>
+                REST API 
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to={"/api"}>
-                Api Demo
+            <li class="nav-item active">
+              <Link class="nav-link" to={"/tasks"}>
+                Task Weather
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to={"/apijh"}>
-                Api Demo 1
+            <li class="nav-item active">
+              <Link class="nav-link" to={"/dynamicform"}>
+                Dynamic Form
+              </Link>
+            </li>
+            <li class="nav-item active">
+              <Link class="nav-link" to={"/muibutton"}>
+                Button Task
               </Link>
             </li>
           </ul>
